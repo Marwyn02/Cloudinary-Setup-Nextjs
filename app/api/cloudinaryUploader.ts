@@ -17,7 +17,7 @@ export const cloudinaryUploader = async (
         invalidate: true,
         resource_type: "auto",
         filename_override: fileName,
-        folder: "product-images", // any sub-folder name in your cloud
+        folder: process.env.UPLOAD_PRESET, // any sub-folder name in your cloud
         use_filename: true,
       })
       .then((result) => {
